@@ -30,6 +30,9 @@ Printing to the #page element is quite simple. All you do is use the ```.out()``
 ### Background
 Tale-js lets you set the mood for a certain chapter by changing the body background of the page you're on via ```background(url)```.
 
+### Clear
+```clear()``` clears all text in the #page element.
+
 ### Goto
 You may change pages at any time with the ```goto(page)``` function. Just make sure your book actually contains the page.
 
