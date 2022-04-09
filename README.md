@@ -10,25 +10,28 @@ There are a few requirements:
 
 //include Tale
 <script src = "tale.js"></script>
+
+//Load your book file
+load_book("book.json")
 ```
 
 # Documentation
-Tale-js interacts with 2 page elements, an element which displays your text (markdown formatted) called #page, and the body background image (to set chapter themes).
+Tale-js interacts with 2 page elements, an element which displays your text (markdown formatted) called #page, and the body background image (to set chapter themes). You need a #page element, so text can be printed to the user.
 
 ## Formatting
-Tale-js books are in JSON, with a key for each chapter/location. Because JSON doesn't allow multi-line strings, your chapters must use ```\n``` to separate lines.
+Tale-js books are in JSON, with a key for each chapter/location. JSON does not allow multi-lined strings. Your JavaScript will have to be minified into a single string.
 
 The start of the book is called `index`. That's where Tale-js will begin when first opening your book file.
 
 ## functions
 
-The advantage of Tale-js is its functions.
+Tale-js uses several short functions to for ease of use.
 
 ### Printing
 Printing to the #page element is quite simple. All you do is use the ```.out()``` method on your string. Your string is processed for markdown, before being shown to the user.
 
 ### Input
-Ask the user questions with ```input(value, comment)```
+Ask the user questions with ```input(value, placeholder)```. Answers provided by your users are stored in localStorage under the value you've provided.
 
 ### Background
 Tale-js lets you set the mood for a certain chapter by changing the body background of the page you're on via ```background(url)```.
