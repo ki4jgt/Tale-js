@@ -16,7 +16,7 @@ load_book("book.json")
 ```
 
 # Documentation
-Tale-js interacts with 2 page elements, an element which displays your text (markdown formatted) called #page, and the body background image (to set chapter themes). You need a #page element, so text can be printed to the user.
+Tale-js interacts with 2 page elements, an element which displays your text (markdown formatted) called #page, and the body background image (to set chapter themes).
 
 ## Formatting
 Tale-js books are in JSON, with a key for each chapter/location. JSON does not allow multi-lined strings. Your JavaScript will have to be minified into a single string.
