@@ -5,6 +5,7 @@ var book
 String.prototype.out = function() {
     page.innerHTML += md.render(this.toString())
     hljs.highlightAll()
+    page.scrollTop = page.scrollHeight;
 }
 
 async function load_book(url){
@@ -27,7 +28,8 @@ function background(url){
 }
 
 function input(name, comment){
-    page.innerHTML += "<input type = 'text' name = '" + name + "' placeholder = '" + comment + "' onkeyup = 'form_handler(event)'>"
+    page.innerHTML += "<input type = 'text' name = '" + name + "' placeholder = '" + comment + "' onkeyup = 'form_handler(event)'>";
+    page.scrollTop = page.scrollHeight;
 }
 
 function set(key, value){
@@ -45,6 +47,7 @@ window.onhashchange = function () {
 function form_handler(event){
     if (event.key == "Enter"){
         set(event.target.name, event.target.value)
+        event.target.placeholder = event.target.value
         event.target.setAttribute("disabled", true);
     }
 }
