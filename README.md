@@ -27,6 +27,9 @@ The advantage of Tale-js is its functions.
 ### Printing
 Printing to the #page element is quite simple. All you do is use the ```.out()``` method on your string. Your string is processed for markdown, before being shown to the user.
 
+### Input
+Ask the user questions with ```input(value, comment)```
+
 ### Background
 Tale-js lets you set the mood for a certain chapter by changing the body background of the page you're on via ```background(url)```.
 
